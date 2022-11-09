@@ -1,14 +1,14 @@
-import './App.css';
+import { AppWrapper } from './App.styled';
 import { JobBoard } from './components/JobBoard/JobBoard';
 import {Container} from './components/Container/Container';
 
 function App() {
   return (
-    <div>
+    <AppWrapper>
       <Container>        
         <JobBoard />
       </Container>
-    </div>
+    </AppWrapper>
   );
 }
 
