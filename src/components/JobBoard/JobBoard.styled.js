@@ -23,6 +23,7 @@ export const JobBoardItem = styled.li`
     }
     
     @media screen and (min-width:1920px) {
+        display: inline-block;
         max-width: 1400px;
         height: 164px;
         background: #FFFFFF;
@@ -40,6 +41,7 @@ export const JobBoardImg = styled.img`
     height: 40px;
     margin-right: 10px;
     border-radius: 50%;
+    display: inline-block;
 
 @media screen and (min-width: 414px) {
         width: 66px;
@@ -117,8 +119,15 @@ export const JobBoardLocation = styled.p`
 `;
 
 export const JobWrapper = styled.div`
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    @media screen and (min-width: 1920px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;       
+    }
 `;
+
+export const JobList = styled.ul`
+    display: flex;
+    flex-direction: column;
+`
