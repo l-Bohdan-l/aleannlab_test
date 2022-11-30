@@ -1,7 +1,7 @@
 import {MdLocationOn} from 'react-icons/md';
 import {RiStarSFill} from 'react-icons/ri';
 import img from '../../img/person1.jpg';
-import {JobBoardItem, JobBoardImg, JobBoardPostedTime, JobBoardStars, JobBoardStarsWrapper, JobBoardTitle, JobBoardSubtitle, JobBoardLocation, JobWrapper, JobList} from './JobBoard.styled';
+import {JobBoardItem, JobBoardImg, JobBoardPostedTime, JobBoardStars, JobBoardStarsWrapper, JobBoardTitle, JobBoardSubtitle, JobBoardLocation, JobWrapper, JobList, JobCardWrapper} from './JobBoard.styled';
 
 export function JobBoard() {
     return (
@@ -9,7 +9,7 @@ export function JobBoard() {
             <JobList>
                 <JobBoardItem>
                     <JobBoardImg src={img} alt="company logo" width='329'/>
-                    <div>
+                    <JobCardWrapper>
                         <JobBoardStarsWrapper>
                             <JobBoardStars>
                                 <RiStarSFill />
@@ -27,7 +27,7 @@ export function JobBoard() {
                         </JobBoardSubtitle>
                         <JobBoardLocation><MdLocationOn size={18}/> Vienna, Austria</JobBoardLocation>
                         </JobWrapper>                   
-                    </div>
+                    </JobCardWrapper>
                 </JobBoardItem>
             </JobList>
         </div>

@@ -16,15 +16,17 @@ export const JobBoardItem = styled.li`
     justify-content: space-between;
     align-items: start;
     
-    @media screen and (min-width:414px) {
+    @media screen and (min-width:414px) and (max-width: 1920px) {
         max-width: 396px;
         max-height: 206px;
         
     }
     
     @media screen and (min-width:1920px) {
-        display: inline-block;
-        max-width: 1400px;
+        justify-content: flex-start;
+        gap: 26px;
+        display: flex;
+        width: 1400px;
         height: 164px;
         background: #FFFFFF;
         box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -79,6 +81,9 @@ export const JobBoardStarsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 17px;
+    @media screen and (min-width: 1920px) {
+        flex-direction: column;
+    }
 `;
 
 export const JobBoardTitle = styled.h2`    
@@ -121,13 +126,25 @@ export const JobBoardLocation = styled.p`
 export const JobWrapper = styled.div`
     @media screen and (min-width: 1920px) {
         display: flex;
-        flex-direction: row-reverse;
+        /* flex-direction: row-reverse; */
         justify-content: center;
-        align-items: center;       
+        /* align-items: center;        */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 959px;
     }
 `;
 
 export const JobList = styled.ul`
     display: flex;
     flex-direction: column;
+`
+
+export const JobCardWrapper = styled.div`
+    @media screen and (min-width: 1920px) {
+        display: flex;
+        flex-direction: row-reverse;   
+        gap: 170px;
+    }
+    
 `
