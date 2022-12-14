@@ -13,12 +13,13 @@ export const JobBoardItem = styled.li`
     padding-right: 16px;
     padding-top: 17px;
     display: flex;  
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: start;
+    margin-bottom: 8px;
     
     @media screen and (min-width:414px) and (max-width: 1920px) {
-        max-width: 396px;
-        max-height: 206px;
+        width: 396px;
+        height: 206px;
         
     }
     
