@@ -8,21 +8,28 @@ import {
 } from "react-router-dom";
 import {Home} from './components/Home/Home'
 import { ErrorPage } from './components/ErrorPage/Error';
+import { JobDetail } from './components/JobDetail/JobDetail';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
-    children: [
-      {
+    // children: [
+    //   {
         
-      },
-    ],
+    //   },
+    // ],
   },
   {
     path: "/job-board",
-    element: <JobBoard/>,
+    element: <JobBoard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/job-board/:jobId",
+    element: <JobDetail />,
+    errorElement: <ErrorPage />,
   }
 ]);
 

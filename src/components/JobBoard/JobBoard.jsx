@@ -22,7 +22,7 @@ export function JobBoard() {
         <div>
             <JobList>
                 {jobs.map((job) => (
-                    <Link to={`/job/${job.id}`}>
+                    <Link key={job.id} to={`/job-board/${job.id}`}>
                     <JobBoardItem key={job.id}>
                         <JobBoardImg src={job.pictures[1]} alt="company logo" width='329' />
                         <JobCardWrapper>
