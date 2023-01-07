@@ -5,6 +5,7 @@ import { JobBoardItem, JobBoardImg, JobBoardPostedTime, JobBoardStars, JobBoardS
 import { fetchJobs } from '../../services/api';
 import { useState, useEffect } from 'react';
 import moment from "moment";
+import { Link } from 'react-router-dom';
 
 export function JobBoard() {
     const [jobs, setJobs] = useState([]);
@@ -21,6 +22,7 @@ export function JobBoard() {
         <div>
             <JobList>
                 {jobs.map((job) => (
+                    <Link to={`/job/${job.id}`}>
                     <JobBoardItem key={job.id}>
                         <JobBoardImg src={job.pictures[1]} alt="company logo" width='329' />
                         <JobCardWrapper>
@@ -43,7 +45,10 @@ export function JobBoard() {
                                 <JobBoardLocation><MdLocationOn size={18} /> { job.address}</JobBoardLocation>
                             </JobWrapper>
                         </JobCardWrapper>
-                    </JobBoardItem>))}
+                        </JobBoardItem>
+                        </Link>
+                        ))
+                    }
             </JobList>
         </div>
     )
