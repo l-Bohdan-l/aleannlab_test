@@ -4,7 +4,7 @@ import { fetchJobs } from "../../services/api"
 import moment from "moment"
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle } from "./JobDetailed.styled";
 
 export function JobDetail() {
     const [job, setJob] = useState(null);
@@ -31,21 +31,21 @@ export function JobDetail() {
                     <JobDetailMainTitle>Job Details</JobDetailMainTitle>
                     <div>
                         <JobDetailList>
-                            <li>
+                            <ListItem>
                                 <AiOutlineStar />
-                                <span>
+                                <ListSpan>
                                 Save to my list
-                                </span>
-                            </li>
-                            <li>
+                                </ListSpan>
+                            </ListItem>
+                            <ListItem>
                                 <BsShareFill />
-                                <span>
+                                <ListSpan>
                                     Share
-                                </span>
-                            </li>
+                                </ListSpan>
+                            </ListItem>
                         </JobDetailList>
                     </div>
-                    <h2>{job.title}</h2>
+                    <JobTitle>{job.title}</JobTitle>
                     <span>Posted {moment.duration(moment().diff(job.createdAt))
                         .humanize()} ago</span>
                     <span>Brutto, per year</span>
