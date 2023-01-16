@@ -4,7 +4,7 @@ import { fetchJobs } from "../../services/api"
 import moment from "moment"
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton } from "./JobDetailed.styled";
 
 export function JobDetail() {
     const [job, setJob] = useState(null);
@@ -53,21 +53,29 @@ export function JobDetail() {
                         <SalaryWrapper>
 
                             <SalarySpan>Brutto, per year</SalarySpan>
-                            <Salary>{job.salary}</Salary>
+                            <Salary>
+                                <EuroIcon>
+                                €
+                                </EuroIcon>
+                                {job.salary}
+                            </Salary>
                         </SalaryWrapper>
                     </Wrapper>
-                    <p>{job.description}</p>
+                    <MainText description>{job.description}</MainText>
 
-                    <h3>Responsibility</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sed?</p>
+                    <Title>Responsibility</Title>
+                    <MainText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sed?</MainText>
 
-                    <h3>Compensation & Benefits:</h3>
-                    <ul>
+                    <Title>Compensation & Benefits:</Title>
+                    <MainText>
+                        Our physicians enjoy a wide range of benefits, including:
+                    </MainText>
+                    <BenefitsList>
                         {job.benefits.map((benefit) => (
                             <li key={benefit}>{benefit}</li>
                         ))}
-                    </ul>
-                    <button type="button">Apply Now</button>
+                    </BenefitsList>
+                    <ApplyButton type="button">Apply Now</ApplyButton>
                 </div>
                 )}                
             </div>

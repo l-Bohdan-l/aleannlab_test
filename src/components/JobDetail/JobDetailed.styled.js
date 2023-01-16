@@ -79,6 +79,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 14px;
 `
 
 export const SalaryWrapper = styled.div`
@@ -86,4 +87,54 @@ export const SalaryWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`
+
+export const EuroIcon = styled.span`
+    margin-right: 3px;
+`
+
+export const MainText = styled.p`
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;    
+    letter-spacing: -0.5625px;
+    color: rgba(56, 65, 93, 0.82);
+    margin-bottom: ${props => 
+    props.description ? '43px' : '15px'};    
+    
+`
+
+export const Title = styled.h3`
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.625px;
+    color: #3A4562;
+    margin-bottom: 20px;
+`
+
+export const BenefitsList = styled.ul`
+    list-style: square;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;   
+
+    letter-spacing: -0.5625px;
+
+    color: rgba(56, 65, 93, 0.82);
+`
+
+export const ApplyButton = styled.button`
+    background: #384564;
+    border-radius: 8px;
+    width: 127px;
+    height: 52px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;    
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+
 `
