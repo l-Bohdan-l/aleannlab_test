@@ -4,7 +4,7 @@ import { fetchJobs } from "../../services/api"
 import moment from "moment"
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper } from "./JobDetailed.styled";
 
 export function JobDetail() {
     const [job, setJob] = useState(null);
@@ -46,10 +46,16 @@ export function JobDetail() {
                         </JobDetailList>
                     </div>
                     <JobTitle>{job.title}</JobTitle>
-                    <span>Posted {moment.duration(moment().diff(job.createdAt))
-                        .humanize()} ago</span>
-                    <span>Brutto, per year</span>
-                    <span>{job.salary}</span>
+                    <Wrapper>
+                        <PostedDate>Posted {moment.duration(moment().diff(job.createdAt))
+                            .humanize()} ago
+                        </PostedDate>
+                        <SalaryWrapper>
+
+                            <SalarySpan>Brutto, per year</SalarySpan>
+                            <Salary>{job.salary}</Salary>
+                        </SalaryWrapper>
+                    </Wrapper>
                     <p>{job.description}</p>
 
                     <h3>Responsibility</h3>
