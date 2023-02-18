@@ -122,6 +122,7 @@ export const BenefitsList = styled.ul`
     letter-spacing: -0.5625px;
 
     color: rgba(56, 65, 93, 0.82);
+    margin-bottom: 15px;
 `
 
 export const ApplyButton = styled.button`
@@ -136,5 +137,47 @@ export const ApplyButton = styled.button`
     text-transform: uppercase;
     color: #FFFFFF;
     border: none;
+    margin-bottom: 135px;
 
+`
+
+export const ButtonWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const SecondTitle = styled.h2`
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: 0.413333px;
+
+    color: #3A4562;
+    margin-bottom: 17px;
+
+    ::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E5E5E5;
+        margin-top: 20px;
+
+    }
+`
+
+export const AttachedImage = styled.img`
+    width: 208px;
+`
+
+export const AttachedImageList = styled.ul`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+`
+
+export const AttachedImageSection = styled.section`
+    margin-bottom: 64px;
 `

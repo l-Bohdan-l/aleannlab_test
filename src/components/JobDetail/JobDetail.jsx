@@ -4,7 +4,7 @@ import { fetchJobs } from "../../services/api"
 import moment from "moment"
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection } from "./JobDetailed.styled";
 
 export function JobDetail() {
     const [job, setJob] = useState(null);
@@ -72,10 +72,29 @@ export function JobDetail() {
                     </MainText>
                     <BenefitsList>
                         {job.benefits.map((benefit) => (
-                            <li key={benefit}>{benefit}</li>
+                            <li key={job.benefits.indexOf(benefit)}>{benefit}</li>
                         ))}
                     </BenefitsList>
-                    <ApplyButton type="button">Apply Now</ApplyButton>
+                    <ButtonWrapper>
+                        <ApplyButton type="button">Apply Now</ApplyButton>
+                    </ButtonWrapper>
+                    <AttachedImageSection>
+                        <SecondTitle>
+                           Attached images 
+                        </SecondTitle>
+
+                        <AttachedImageList>
+                            {job.pictures.map((picture) => (                                    
+                                <li key={job.pictures.indexOf(picture)}>
+                                    <AttachedImage src={picture} alt="job" />
+                                </li>
+                            ))}
+                        </AttachedImageList>
+                    </AttachedImageSection>
+                    <section>
+                        <h2>Additional Info</h2>
+                        <H4
+                    </section>
                 </div>
                 )}                
             </div>
