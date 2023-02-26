@@ -114,16 +114,28 @@ export const Title = styled.h3`
 `
 
 export const BenefitsList = styled.ul`
-    list-style: square;
+    list-style: ${ props => props.benefitStyle === true ? 'square' : 'none'};
+    margin-bottom: 15px;
+    `
+export const BenefitsListItem = styled.li`
+    display: ${props => props.benefitStyleItem === true ? 'list-item' : 'flex'};
+    justify-content: ${props => props.benefitStyleItem === true ? 'none' : 'center'};
+    align-items: ${props => props.benefitStyleItem === true ? 'none' : 'center'};
+    
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.33;   
-
+    line-height: 1.33;
     letter-spacing: -0.5625px;
+    
+ 
+    color: ${props => props.benefitStyleItem === true ?'rgba(56, 65, 93, 0.82)' : '#988B49'};
 
-    color: rgba(56, 65, 93, 0.82);
-    margin-bottom: 15px;
-`
+    background: ${props => props.benefitStyleItem === true ? 'none' : 'rgba(255, 207, 0, 0.15)'};
+    border: ${props => props.benefitStyleItem === true ? 'none' : '1px solid #FFCF00'};
+    border-radius: ${props => props.benefitStyleItem === true ? 'none' : '8px'};
+    width: ${props => props.benefitStyleItem === true ? 'none' : '170px'};
+    height: ${ props => props.benefitStyleItem === true ? 'none' : '50px' };
+    `
 
 export const ApplyButton = styled.button`
     background: #384564;
@@ -193,19 +205,25 @@ export const InfoListTitle = styled.h4`
 `
 
 export const InfoListItem = styled.li`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(161, 177, 219, 0.317343);
     border: 1px solid rgba(85, 105, 158, 0.3);
     border-radius: 8px;
+    width: 122px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.00;
+    text-align: center;
+    letter-spacing: -0.457143px;
+    color: #55699E;
+    `
+
+export const InfoList = styled.ul`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 22px;
 `
-
-// font-weight: 700;
-// font-size: 16px;
-// line-height: 16px;
-// /* identical to box height, or 100% */
-
-// text-align: center;
-// letter-spacing: -0.457143px;
-
-// /* Bright/Blue Calm */
-
-// color: #55699E;

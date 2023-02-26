@@ -4,8 +4,7 @@ import { fetchJobs } from "../../services/api"
 import moment from "moment"
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem } from "./JobDetailed.styled";
-import { JobBenefits } from "../JobBenefits/JobBenefits";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem } from "./JobDetailed.styled";
 import { nanoid } from "nanoid";
 
 export function JobDetail() {
@@ -71,30 +70,18 @@ export function JobDetail() {
                     <Title>Compensation & Benefits:</Title>
                     <MainText>
                         Our physicians enjoy a wide range of benefits, including:
-                    </MainText>
-                    <JobBenefits benefits={job.benefits} />
-                    {/* <BenefitsList>
+                    </MainText>                   
+                    <BenefitsList benefitStyle>
                         {job.benefits.map((benefit) => (
-                            <li key={nanoid()}>{benefit}</li>
+                            <BenefitsListItem benefitStyleItem key={nanoid()}>{benefit}</BenefitsListItem>
                         ))}
-                    </BenefitsList> */}
+                    </BenefitsList>
                     <ButtonWrapper>
                         <ApplyButton type="button">Apply Now</ApplyButton>
                     </ButtonWrapper>
-                    <section>
-                        <SecondTitle>Additional Info</SecondTitle>
-                        <InfoListTitle>Employment type</InfoListTitle>
-                        <ul>
-                            <InfoListItem>Full time</InfoListItem>
-                            <InfoListItem>Part time</InfoListItem>
-                            <InfoListItem>Temporary</InfoListItem>
-                        </ul>
-                        <InfoListTitle>Benefits</InfoListTitle>
-                            <JobBenefits benefits={job.benefits} />
-                    </section>
                     <AttachedImageSection>
                         <SecondTitle>
-                           Attached images 
+                            Attached images 
                         </SecondTitle>
 
                         <AttachedImageList>
@@ -105,6 +92,21 @@ export function JobDetail() {
                             ))}
                         </AttachedImageList>
                     </AttachedImageSection>                   
+                    <section>
+                        <SecondTitle>Additional Info</SecondTitle>
+                        <InfoListTitle>Employment type</InfoListTitle>
+                        <InfoList>
+                            <InfoListItem>Full time</InfoListItem>
+                            <InfoListItem>Part time</InfoListItem>
+                            <InfoListItem>Temporary</InfoListItem>
+                        </InfoList>
+                        <InfoListTitle>Benefits</InfoListTitle>
+                            <BenefitsList>
+                                {job.benefits.map((benefit) => (
+                                    <BenefitsListItem key={nanoid()}>{benefit}</BenefitsListItem>
+                                ))}
+                            </BenefitsList>
+                    </section>
                 </div>
                 )}                
             </div>
