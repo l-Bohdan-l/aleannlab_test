@@ -181,3 +181,31 @@ export const AttachedImageList = styled.ul`
 export const AttachedImageSection = styled.section`
     margin-bottom: 64px;
 `
+
+export const InfoListTitle = styled.h4`  
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;    
+
+    letter-spacing: -0.5625px;
+    color: #3A4562;
+    margin-bottom: 10px;
+`
+
+export const InfoListItem = styled.li`
+    background: rgba(161, 177, 219, 0.317343);
+    border: 1px solid rgba(85, 105, 158, 0.3);
+    border-radius: 8px;
+`
+
+// font-weight: 700;
+// font-size: 16px;
+// line-height: 16px;
+// /* identical to box height, or 100% */
+
+// text-align: center;
+// letter-spacing: -0.457143px;
+
+// /* Bright/Blue Calm */
+
+// color: #55699E;
