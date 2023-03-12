@@ -114,8 +114,12 @@ export const Title = styled.h3`
 `
 
 export const BenefitsList = styled.ul`
+    display: ${props => props.benefitStyle === true ? 'block' : 'flex'};
+    justify-content: ${props => props.benefitStyle === true ? 'none' : 'space-evenly'}; 
+    align-items: ${props => props.benefitStyle === true ? 'none' : 'center'};   
+    gap: ${props => props.benefitStyle === true ? 'none' : '7px'};
     list-style: ${ props => props.benefitStyle === true ? 'square' : 'none'};
-    margin-bottom: 15px;
+    margin-bottom: ${props => props.benefitStyle === true ? '15px' : '63px'};
     `
 export const BenefitsListItem = styled.li`
     display: ${props => props.benefitStyleItem === true ? 'list-item' : 'flex'};

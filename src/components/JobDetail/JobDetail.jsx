@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchJobs } from "../../services/api"
 import moment from "moment"
+import {MdLocationOn} from 'react-icons/md';
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
 import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem } from "./JobDetailed.styled";
@@ -106,6 +107,19 @@ export function JobDetail() {
                                     <BenefitsListItem key={nanoid()}>{benefit}</BenefitsListItem>
                                 ))}
                             </BenefitsList>
+                    </section>
+                    <section>
+                        <SecondTitle>Contacts</SecondTitle>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li><MdLocationOn/>{job.address}</li>
+                                    <li>{job.phone}</li>
+                                    <li>{job.email}</li>
+                                </ul>
+                            </div>
+                            <div id="map"></div>
+                        </div>
                     </section>
                 </div>
                 )}                
