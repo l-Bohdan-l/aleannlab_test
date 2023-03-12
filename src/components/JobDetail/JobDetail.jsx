@@ -5,7 +5,7 @@ import moment from "moment"
 import {MdLocationOn} from 'react-icons/md';
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem, ContactsContainer } from "./JobDetailed.styled";
 import { nanoid } from "nanoid";
 
 export function JobDetail() {
@@ -110,7 +110,7 @@ export function JobDetail() {
                     </section>
                     <section>
                         <SecondTitle>Contacts</SecondTitle>
-                        <div>
+                        <ContactsContainer>
                             <div>
                                 <ul>
                                     <li><MdLocationOn/>{job.address}</li>
@@ -118,8 +118,12 @@ export function JobDetail() {
                                     <li>{job.email}</li>
                                 </ul>
                             </div>
-                            <div id="map"></div>
-                        </div>
+                            <div id="map">
+                                <p>
+                                    Map Unavailable
+                                </p>
+                            </div>
+                        </ContactsContainer>
                     </section>
                 </div>
                 )}                

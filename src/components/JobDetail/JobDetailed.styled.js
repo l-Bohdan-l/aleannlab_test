@@ -231,3 +231,7 @@ export const InfoList = styled.ul`
     align-items: center;
     margin-bottom: 22px;
 `
+
+export const ContactsContainer = styled.div`
+    background-color: #E7EAF0;
+`
