@@ -233,5 +233,40 @@ export const InfoList = styled.ul`
 `
 
 export const ContactsContainer = styled.div`
-    background-color: #E7EAF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #3A4562;
+    color: #E7EAF0;
+    padding: 20px 0;
+    height: 400px;
+    margin-bottom: 20px;
+`
+
+export const ContactsInfoWrapper = styled.div`
+    text-align: center;
+    margin-bottom: 20px;
+`
+
+export const ContactsInfoItem = styled.li`
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.33;
+    letter-spacing: -0.5625px;
+    margin-bottom: 5px;  
+`
+
+export const MapWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const MapPlaceholder = styled.p`
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -0.5625px;
+    margin-bottom: 5px; 
 `

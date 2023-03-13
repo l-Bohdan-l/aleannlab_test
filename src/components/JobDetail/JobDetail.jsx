@@ -5,7 +5,7 @@ import moment from "moment"
 import {MdLocationOn} from 'react-icons/md';
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsShareFill } from 'react-icons/bs';
-import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem, ContactsContainer } from "./JobDetailed.styled";
+import { JobDetailMainTitle, JobDetailList, ListItem, ListSpan, JobTitle, PostedDate, SalarySpan, Salary, Wrapper, SalaryWrapper, EuroIcon, MainText, Title, BenefitsList, ApplyButton, ButtonWrapper, SecondTitle, AttachedImage, AttachedImageList, AttachedImageSection, InfoListTitle, InfoListItem, InfoList, BenefitsListItem, ContactsContainer, ContactsInfoWrapper, ContactsInfoItem, MapWrapper, MapPlaceholder } from "./JobDetailed.styled";
 import { nanoid } from "nanoid";
 
 export function JobDetail() {
@@ -111,18 +111,18 @@ export function JobDetail() {
                     <section>
                         <SecondTitle>Contacts</SecondTitle>
                         <ContactsContainer>
-                            <div>
+                            <ContactsInfoWrapper>
                                 <ul>
-                                    <li><MdLocationOn/>{job.address}</li>
-                                    <li>{job.phone}</li>
-                                    <li>{job.email}</li>
+                                    <ContactsInfoItem><MdLocationOn/>{job.address}</ContactsInfoItem>
+                                    <ContactsInfoItem>{job.phone}</ContactsInfoItem>
+                                    <ContactsInfoItem>{job.email}</ContactsInfoItem>
                                 </ul>
-                            </div>
-                            <div id="map">
-                                <p>
+                            </ContactsInfoWrapper>
+                            <MapWrapper>
+                                <MapPlaceholder>
                                     Map Unavailable
-                                </p>
-                            </div>
+                                </MapPlaceholder>
+                            </MapWrapper>
                         </ContactsContainer>
                     </section>
                 </div>
