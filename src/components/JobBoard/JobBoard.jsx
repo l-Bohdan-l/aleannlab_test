@@ -1,7 +1,7 @@
 import {MdLocationOn} from 'react-icons/md';
 import {RiStarSFill} from 'react-icons/ri';
 // import img from '../../img/person1.jpg';
-import { JobBoardItem, JobBoardImg, JobBoardPostedTime, JobBoardStars, JobBoardStarsWrapper, JobBoardTitle, JobBoardSubtitle, JobBoardLocation, JobWrapper, JobList, JobCardWrapper } from './JobBoard.styled';
+import { JobBoardItem, JobBoardImg, JobBoardPostedTime, JobBoardStars, JobBoardStarsWrapper, JobBoardTitle, JobBoardSubtitle, JobBoardLocation, JobWrapper, JobList, JobCardWrapper, Wrapper } from './JobBoard.styled';
 import { fetchJobs } from '../../services/api';
 import { useState, useEffect } from 'react';
 import moment from "moment";
@@ -19,7 +19,7 @@ export function JobBoard() {
  
 
     return (
-        <div>
+        <Wrapper>
             <JobList>
                 {jobs.map((job) => (
                     <Link key={job.id} to={`/job-board/${job.id}`}>
@@ -50,6 +50,6 @@ export function JobBoard() {
                         ))
                     }
             </JobList>
-        </div>
+        </Wrapper>
     )
 }

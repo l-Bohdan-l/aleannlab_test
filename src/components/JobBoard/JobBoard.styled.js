@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`   
+`
+
 export const JobBoardItem = styled.li`
     /* width: 100%; */
     height: auto;
@@ -24,12 +27,13 @@ export const JobBoardItem = styled.li`
     }
     
     @media screen and (min-width:1920px) {
+        /* background-color: #F5F5F5; */
         justify-content: flex-start;
         gap: 26px;
         display: flex;
         width: 1400px;
         height: 164px;
-        background: #FFFFFF;
+        /* background: #FFFFFF; */
         box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
         padding-bottom: 24px;
         padding-left: 16px;

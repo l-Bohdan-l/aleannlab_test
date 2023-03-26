@@ -1,5 +1,21 @@
 import styled from 'styled-components';
 
+// @media screen and (min-width: 414px) {
+
+export const MainJobWrapper = styled.div`
+    @media screen and (min-width: 1920px) {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        align-items: flex-start;
+        background-color: white;
+    }
+`
+
+export const SecondJobWrapper = styled.div`
+    width: 780px;
+`
+
 export const JobDetailMainTitle = styled.h1`
     font-weight: 700;
     font-size: 28px;
@@ -120,6 +136,10 @@ export const BenefitsList = styled.ul`
     gap: ${props => props.benefitStyle === true ? 'none' : '7px'};
     list-style: ${ props => props.benefitStyle === true ? 'square' : 'none'};
     margin-bottom: ${props => props.benefitStyle === true ? '15px' : '63px'};
+
+    @media screen and (min-width: 1920px) {
+        justify-content: flex-start;
+    }
     `
 export const BenefitsListItem = styled.li`
     display: ${props => props.benefitStyleItem === true ? 'list-item' : 'flex'};
@@ -161,6 +181,10 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 1920px) {
+        justify-content: flex-start;
+    }
 `
 
 export const SecondTitle = styled.h2`
@@ -230,6 +254,11 @@ export const InfoList = styled.ul`
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 22px;
+
+    @media screen and (min-width: 1920px) {
+        justify-content: flex-start;
+        gap: 7px;
+    }
 `
 
 export const ContactsContainer = styled.div`
@@ -261,6 +290,9 @@ export const MapWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 1920px) {
+        width: 420px;
+    }
 `
 
 export const MapPlaceholder = styled.p`
@@ -269,4 +301,27 @@ export const MapPlaceholder = styled.p`
     line-height: 1.33;
     letter-spacing: -0.5625px;
     margin-bottom: 5px; 
+`
+
+export const BackButton = styled.button`
+    @media screen and (max-width: 1919px) {
+        display: none;
+    }
+
+    width: 213px;
+    height: 50px;   
+    background: rgba(161, 177, 219, 0.317343);
+    border-radius: 8px;
+    border: none;
+    `
+   export const BackButtonText = styled.span`
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33; 
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #55699E
 `
